@@ -1,1 +1,1 @@
-# CookieClickeReact
+# CookieClickerReact
