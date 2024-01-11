@@ -13,9 +13,11 @@ export default function App () {
     {name:"Item5",cost: 1000000, cpsShop: 10000},
   ];
 
+  const secretSpotUpgrade = { name: "Secret Spot", cost : 0, cpsShop: 1000};
+
   useEffect(() => {
     const cookieInterval = setInterval(() => {
-      setCookies((currentCookies) => currentCookies + 1);
+      setCookies((currentCookies) => currentCookies + cps);
     }, 1000 /cps)
     return() => {
       clearInterval(cookieInterval);
@@ -42,6 +44,11 @@ export default function App () {
     }
   }
 
+  function secretSpotClick() {
+    increaseCpsShop(secretSpotUpgrade);
+    alert("You found the secret spot! +10000 Cookies Per Second!!!")
+  }
+
   return (
     <div className="gameContainer">
       <h1>Cookies : {cookies}</h1>
@@ -58,6 +65,9 @@ export default function App () {
       </div>
       ))}
     </div>
+    <div className="secretSpot" onClick={secretSpotClick}>
+        <p>SS spot</p>
+      </div>
   </div>
   );
 }
