@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    margin:0 ;
+    padding: 0;
+    background-color: bisque;
+    font-family: monospace;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 30px double black;
+    height: 100vh;
+}
+
+.shopContainer {
+    border: 6px solid black;
+    border-radius: 10%;
+    padding: 1rem;
+}
